@@ -18,6 +18,8 @@ namespace SimpleDI
 			var profile = worker.ReadUserProfileFromLocalStorage ();
 
 			Debug.WriteLine (string.Format(@"MyClass profile:{0}", profile));
+
+			//return profile;
 		}
 	}
 
@@ -34,6 +36,8 @@ namespace SimpleDI
 			var profile = Worker.ReadUserProfileFromLocalStorage ();
 
 			Debug.WriteLine (string.Format(@"MyClass2 profile:{0}", profile));
+
+			//return profile;
 		}
 	}
 }

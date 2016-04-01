@@ -1,6 +1,7 @@
 ﻿using System;
 		
 using UIKit;
+using Foundation;
 
 using Debug = System.Diagnostics.Debug;
 
@@ -33,7 +34,7 @@ namespace SimpleDI.iOS
 
 			Button.TouchUpInside += delegate {
 				//ShowAlert( "呼叫端決定內部邏輯", (e)=>{ Debug.WriteLine( "這是 iOS");});
-				ShowAlertR1( "呼叫端決定內部邏輯", (string obj) => {  Debug.WriteLine( string.Format( "ShowAlertR1:{0}",obj)); }); 
+				ShowAlertR1( NSBundle.MainBundle.LocalizedString("Next", null), (string obj) => {  Debug.WriteLine( string.Format( "ShowAlertR1:{0}",obj)); }); 
 			};
 		}
 

@@ -25,7 +25,7 @@ namespace SimpleDI.Droid
 			Button button = FindViewById<Button> (Resource.Id.myButton);
 			button.Click += delegate {
 				//ShowAlert( "呼叫端決定內部邏輯", (sender, e) =>{Log.Info( "SimpleDI", "這是Android");});
-				ShowAlertR1( "呼叫端決定內部邏輯",  (string obj)=>{Log.Info( "SimpleDI", string.Format("這是Android:{0}", obj));} );
+				ShowAlertR1( Resource.String.hello ,  (string obj)=>{Log.Info( "SimpleDI", string.Format("這是Android:{0}", obj));} );
 			};
 
 			var myClass = new MyClass ();
