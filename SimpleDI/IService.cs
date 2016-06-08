@@ -2,10 +2,17 @@
 
 namespace SimpleDI
 {
+	public class User{
+		public string Name ;
+		public string Id;
+	}
+
+
 	public interface IWorker{
 
-		string ReadUserProfileFromLocalStorage () ;
-
+		User ReadUserProfileById (string id) ;
+		void ShowAlert (string title, string message, Action<string> action ) ;
+	
 	}
 }
 

@@ -13,7 +13,7 @@ namespace SimpleDI.iOS.Test
 		[Test]
 		public void TestUsersProfile(){
 
-			MyClass cls = new MyClass ();
+			//BusinessManager cls = new BusinessManager ();
 			//var result = cls.VerifyPassword ("",new iOSWorker ());
 
 			//Assert.AreEqual ("iOS ReadUserProfileFromLocalStorage", result);

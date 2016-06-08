@@ -24,26 +24,26 @@ namespace SimpleDI.Droid
 			// and attach an event to it
 			Button button = FindViewById<Button> (Resource.Id.myButton);
 			button.Click += delegate {
-				//ShowAlert( "呼叫端決定內部邏輯", (sender, e) =>{Log.Info( "SimpleDI", "這是Android");});
-				ShowAlertR1( "呼叫端決定內部邏輯" ,  (string obj)=>{Log.Info( "SimpleDI", string.Format("這是Android:{0}", obj));} );
+				//ShowAlert("Android", "呼叫端決定內部邏輯", (sender, e) =>{Log.Info( "SimpleDI", "這是Android");});
+				ShowAlertR1("Android", "呼叫端決定內部邏輯" ,  (string obj)=>{Log.Info( "SimpleDI", string.Format("這是Android:{0}", obj));} );
 			};
 
-			/*
-			var myClass = new MyClass ();
-			myClass.VerifyPassword ("", new AndroidWorker ());
-			*/
 
+			var managerA = new BusinessManagerA ();
+			managerA.VerifyPassword ("", "", new AndroidWorker (this), (msg)=>{});
 
-			var myClass2 = new MyClass2 (new AndroidWorker ());
-			myClass2.VerifyPassword ("");
+			var managerB = new BusinessManagerB (new AndroidWorker (this));
+			managerB.VerifyPassword ("", "", (msg)=>{});
+
 
 		}
 
-		private void ShowAlert(string message, EventHandler<Android.Content.DialogClickEventArgs> positiveButtonClickHandle){
+		private void ShowAlert(string title, string message, EventHandler<Android.Content.DialogClickEventArgs> positiveButtonClickHandle){
 
 			AlertDialog.Builder alert = new AlertDialog.Builder (this);
 
-			alert.SetTitle (message);
+			alert.SetTitle (title);
+			alert.SetMessage (message);
 
 			alert.SetPositiveButton ("Confirm", positiveButtonClickHandle);
 
@@ -53,11 +53,12 @@ namespace SimpleDI.Droid
 
 		}
 
-		private void ShowAlertR1(string message, Action<string> action ){
+		private void ShowAlertR1(string title, string message, Action<string> action ){
 
 			AlertDialog.Builder alert = new AlertDialog.Builder (this);
 
-			alert.SetTitle (message);
+			alert.SetTitle (title);
+			alert.SetMessage (message);
 
 			alert.SetPositiveButton ("Confirm", (sender, e) =>{ action("ShowAlertR1"); });
 

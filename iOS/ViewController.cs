@@ -23,19 +23,29 @@ namespace SimpleDI.iOS
 			Xamarin.Calabash.Start ();
 			#endif
 
-			/*
-			var myClass = new MyClass ();
-			myClass.VerifyPassword ("", new iOSWorker ());
-			*/
 
-			var myClass2 = new MyClass2 (new iOSWorker ());
-			myClass2.VerifyPassword ("");
+
 
 
 			Button.TouchUpInside += delegate {
-				//ShowAlert( "呼叫端決定內部邏輯", (e)=>{ Debug.WriteLine( "這是 iOS");});
-				ShowAlertR1( NSBundle.MainBundle.LocalizedString("Next", null), (string obj) => {  Debug.WriteLine( string.Format( "ShowAlertR1:{0}",obj)); }); 
+				//ShowAlert("iOS", "呼叫端決定內部邏輯", (e)=>{ Debug.WriteLine( "這是 iOS");});
+				ShowAlertR1("iOS", NSBundle.MainBundle.LocalizedString("Next", null), (string obj) => {  Debug.WriteLine( string.Format( "ShowAlertR1:{0}",obj)); }); 
 			};
+
+			InvokeOnMainThread (()=>{});
+		}
+
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (animated);
+
+			var managerA = new BusinessManagerA ();
+			managerA.VerifyPassword ("", "", new iOSWorker (this), (msg)=>{});
+
+
+			//var managerB = new BusinessManagerB (new iOSWorker (this));
+			//managerB.VerifyPassword ("", "", (msg)=>{});
+
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -44,10 +54,11 @@ namespace SimpleDI.iOS
 			// Release any cached data, images, etc that aren't in use.		
 		}
 
-		public void ShowAlert(string message, Action<UIAlertAction> action){
+		public void ShowAlert(string title, string message, Action<UIAlertAction> action){
+
 
 			//Create Alert
-			var confirmAlertController = UIAlertController.Create("Alert", message, UIAlertControllerStyle.Alert);
+			var confirmAlertController = UIAlertController.Create(title, message, UIAlertControllerStyle.Alert);
 
 			//Add Actions
 			confirmAlertController.AddAction(UIAlertAction.Create("Confirm", UIAlertActionStyle.Default, action ));
@@ -56,10 +67,10 @@ namespace SimpleDI.iOS
 
 		}
 			
-		public void ShowAlertR1(string message, Action<string> action){
+		public void ShowAlertR1(string title, string message, Action<string> action){
 
 			//Create Alert
-			var confirmAlertController = UIAlertController.Create("Alert", message, UIAlertControllerStyle.Alert);
+			var confirmAlertController = UIAlertController.Create(title, message, UIAlertControllerStyle.Alert);
 
 			//Add Actions
 			confirmAlertController.AddAction(UIAlertAction.Create("Confirm", UIAlertActionStyle.Default, (e)=>{  
