@@ -42,7 +42,6 @@ namespace SimpleDI.iOS
 			ViewController.InvokeOnMainThread (()=>{
 				ViewController.PresentViewController (confirmAlertController, true, null);
 			});
-
 		}
 	}
 }
