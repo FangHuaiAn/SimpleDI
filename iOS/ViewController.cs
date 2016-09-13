@@ -18,33 +18,23 @@ namespace SimpleDI.iOS
 		{
 			base.ViewDidLoad ();
 
-			// Code to start the Xamarin Test Cloud Agent
-			#if ENABLE_TEST_CLOUD
-			Xamarin.Calabash.Start ();
-			#endif
-
-
-
-
-
 			Button.TouchUpInside += delegate {
 				//ShowAlert("iOS", "呼叫端決定內部邏輯", (e)=>{ Debug.WriteLine( "這是 iOS");});
 				ShowAlertR1("iOS", NSBundle.MainBundle.LocalizedString("Next", null), (string obj) => {  Debug.WriteLine( string.Format( "ShowAlertR1:{0}",obj)); }); 
 			};
 
-			InvokeOnMainThread (()=>{});
 		}
 
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
 
-			var managerA = new BusinessManagerA ();
-			managerA.VerifyPassword ("", "", new iOSWorker (this), (msg)=>{});
+			//var managerA = new BusinessManagerA ();
+			//managerA.VerifyPassword ("", "", new iOSWorker (this), (msg)=>{});
 
 
-			//var managerB = new BusinessManagerB (new iOSWorker (this));
-			//managerB.VerifyPassword ("", "", (msg)=>{});
+			var managerB = new BusinessManagerB (new iOSWorker (this));
+			managerB.VerifyPassword ("", "", (msg)=>{});
 
 		}
 
