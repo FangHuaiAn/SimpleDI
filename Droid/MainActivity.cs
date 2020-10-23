@@ -16,7 +16,6 @@ namespace SimpleDI.Droid
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
-			Xamarin.Insights.Initialize (global::SimpleDI.Droid.XamarinInsights.ApiKey, this);
 			base.OnCreate (savedInstanceState);
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);

@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{D4664BD5-546F-45BC-B7A3-D0077FB85BAB}|Default">
+  <MonoDevelop.Ide.ItemProperties.SimpleDI.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4A89E418-5755-464A-A669-837DA6D864A1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/AndroidWorker.cs">
+    <Files>
+      <File FileName="Droid/AndroidWorker.cs" Line="17" Column="22" />
+      <File FileName="iOS/iOSWorker.cs" />
+      <File FileName="SimpleDI.Web/AspNetWorker.cs" />
+      <File FileName="SimpleDI.Web/Index.aspx.cs" />
+      <File FileName="SimpleDI/BusinessManager.cs" />
+      <File FileName="iOS/Info.plist" />
+      <File FileName="iOS/ViewController.cs" Line="25" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SimpleDI" expanded="True">
+            <Node name="SimpleDI" expanded="True" />
+            <Node name="SimpleDI.Droid" expanded="True">
+              <Node name="AndroidWorker.cs" selected="True" />
+            </Node>
+            <Node name="SimpleDI.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SimpleDI.Web PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.SimpleDI.Droid PreferredExecutionTarget="Android.cc5e63f2" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -19,7 +19,7 @@ namespace SimpleDI
 
 			Debug.WriteLine (string.Format(@"BusinessManagerA profile:{0}", profile.Name));
 		
-			worker.ShowAlert ("登入", "登入成功", action);
+			worker.ShowAlert ("登入", $"{id}登入成功:{password}", action);
 		}
 	}
 
@@ -37,7 +37,7 @@ namespace SimpleDI
 
 			Debug.WriteLine (string.Format(@"BusinessManagerB profile:{0}", profile.Name));
 
-			Worker.ShowAlert ("登入", "登入成功", action);
+			Worker.ShowAlert ($"登入", $"{id}登入成功:{password}", action);
 		}
 	}
 }
