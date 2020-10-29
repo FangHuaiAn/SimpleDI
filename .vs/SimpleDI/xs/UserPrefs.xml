@@ -2,13 +2,13 @@
   <MonoDevelop.Ide.ItemProperties.SimpleDI.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4A89E418-5755-464A-A669-837DA6D864A1" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Droid/AndroidWorker.cs">
     <Files>
-      <File FileName="Droid/AndroidWorker.cs" Line="17" Column="22" />
+      <File FileName="Droid/AndroidWorker.cs" Line="8" Column="1" />
       <File FileName="iOS/iOSWorker.cs" />
       <File FileName="SimpleDI.Web/AspNetWorker.cs" />
       <File FileName="SimpleDI.Web/Index.aspx.cs" />
       <File FileName="SimpleDI/BusinessManager.cs" />
       <File FileName="iOS/Info.plist" />
-      <File FileName="iOS/ViewController.cs" Line="25" Column="1" />
+      <File FileName="iOS/ViewController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.SimpleDI.Web PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.SimpleDI.Droid PreferredExecutionTarget="Android.cc5e63f2" />
+  <MonoDevelop.Ide.ItemProperties.SimpleDI.Droid PreferredExecutionTarget="Android.pixel_3a_xl_r_11_0_-_api_30" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
